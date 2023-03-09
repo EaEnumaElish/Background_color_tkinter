@@ -15,6 +15,7 @@ mainFrame.pack(side=TOP)
 def rgb_to_hex(r, g, b):
     return '#%02X%02X%02X' % (r, g, b)
 
+
 def change_color(event):
     tuple = colorsys.hsv_to_rgb(var_R.get(), 1, var_Alpha.get())
     r, g, b = tuple
@@ -22,6 +23,7 @@ def change_color(event):
     g = round(g * 255)
     b = round(b * 255)
     main.configure(background=rgb_to_hex(r, g, b))
+
 
 var_R = DoubleVar()
 var_Alpha = DoubleVar()
